@@ -1,0 +1,25 @@
+from terminaltables import AsciiTable
+
+tabela_kwiaty = [
+    ['Kwiaty', 'Kolor', 'Cena', 'Pochodzenie', 'Szczep', 'Grupa', 'Ilosc w paczce'],
+    ['Tulipan', 'czerwony', '4.12', 'Polska', 'XYZ', 'A', '36'],
+    ['Roza', 'bialy', '6.33', 'USA', 'RER', 'B', '12'],
+    ['Chryzantem', 'zolty', '8.11', 'Holandia', 'A11', 'C', '24']
+]
+
+tabela_kwiaty_ascii = AsciiTable(tabela_kwiaty)
+
+print(tabela_kwiaty_ascii.table)
+
+for wiersz in tabela_kwiaty:
+    print("Pierwsza kolumna:", wiersz[0])
+
+print("===================================")
+
+for wiersz in tabela_kwiaty:
+    print("Druga kolumna:", wiersz[1])
+
+print("===================================")
+
+print("Wiersz naglowkowy:", tabela_kwiaty[0])
+print("Wiersz pierwszy:", tabela_kwiaty[1])

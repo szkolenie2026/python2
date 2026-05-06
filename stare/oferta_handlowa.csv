@@ -1,0 +1,9 @@
++-----------+------+-------------+--------+-------+----------------+
+|   kolor   | cena | pochodzenie | szczep | grupa | ilosc w paczce |
++-----------+------+-------------+--------+-------+----------------+
+|  czerwony | 4.12 |    Polska   |  XYZ   |   A   |       36       |
+|   bialy   | 6.33 |   Holandia  |  RER   |   B   |       12       |
+| niebieski | 8.11 |   Holandia  |  A10   |   C   |       24       |
+| niebieski | 8.11 |    Polska   |  A10   |   B   |       24       |
+| niebieski | 8.11 |   Holandia  |  A10   |   B   |       24       |
++-----------+------+-------------+--------+-------+----------------+
