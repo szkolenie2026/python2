@@ -1,30 +1,25 @@
-def dekor(funkcja):
-    def wew():
-        print("Dekorujemy funkcję")
-        return funkcja()
+import time
 
-    return wew
+# 1. Definicja dekoratora
+def stoper(funkcja):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        
+        # Wywołanie oryginalnej funkcji
+        wynik = funkcja(*args, **kwargs) 
+        
+        koniec = time.time()
+        print(f"Funkcja '{funkcja.__name__}' wykonała się w {koniec - start:.4f} sekund.")
+        return wynik
+        
+    return wrapper
+# 2. Użycie dekoratora
+@stoper
+def policz_do_miliona():
+    suma = 0
+    for i in range(1_000_000):
+        suma += i
+    return suma
 
-
-@dekor
-def zwykłaFunkcja():
-    print("To jest zwykła funkcja")
-
-# nowaFunkcja = dekor(zwykłaFunkcja)
-# nowaFunkcja()
-zwykłaFunkcja()
-
-def dekor(funkcja):
-    def wew(*args, **kwargs):
-        print("Dekorujemy funkcję")
-        return funkcja(*args, **kwargs)
-
-    return wew
-
-
-@dekor
-def zwykłaFunkcja(a, b, c):
-    print("To jest zwykła funkcja, która dodaje liczby:")
-    print(a + b + c)
-
-zwykłaFunkcja(1,2,3)
+# Wywołanie funkcji (dekorator uruchomi się automatycznie!)
+policz_do_miliona()

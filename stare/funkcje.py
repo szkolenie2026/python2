@@ -52,7 +52,7 @@ def pokaz_najwieksza(n1,n2,n3,n4):
     najwieksza = max(lista)
     return najwieksza
 
-##print(pokaz_najwieksza(10,20,30,15))
+print(pokaz_najwieksza(10,20,30,15))
 
 
 
@@ -60,7 +60,7 @@ def pokaz_najwieksza2(*args):
     najwieksza = max(args)
     return najwieksza
 
-##print(pokaz_najwieksza2(10,20,30,15,55,10))
+print(pokaz_najwieksza2(10,20,30,15,55,10))
 
 ##{
 ##    "Średnia:": 123,
