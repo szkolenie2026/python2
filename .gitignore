@@ -1,3 +1,9 @@
+nie_sychronizuj/
 venv/
 __pycache__/
 *.pyc
+
+git rm -r --cached
+git add .
+
+
