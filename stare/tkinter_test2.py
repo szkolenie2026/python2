@@ -22,10 +22,5 @@ for i in range(height): #Rows
          borderwidth=1)
         a.grid(row=i,column=j)
         
-
-        
-        
-        
-
 mainloop()
 connection.close()

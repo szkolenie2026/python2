@@ -1,0 +1,42 @@
+kwadraty = []
+for x in range(5):
+    kwadraty.append(x**2)
+
+# Wynik: [0, 1, 4, 9, 16]
+kwadraty = [x**2 for x in range(5)]
+# Wynik: [0, 1, 4, 9, 16]
+
+slowa = ["kot", "pies", "okno", "ul", "samochód"]
+dlugie_slowa = []
+for slowo in slowa:
+    if len(slowo) > 3:
+        dlugie_slowa.append(slowo)
+
+slowa = ["kot", "pies", "okno", "ul", "samochód"]
+dlugie_slowa = [s for s in slowa if len(s) > 3]
+# Wynik: ['pies', 'okno', 'samochód']
+
+firma = [
+    {"dzial": "IT", "pracownicy": [{"imie": "Jan", "wiek": 35, "staz": 5}, {"imie": "Anna", "wiek": 28, "staz": 2}]},
+    {"dzial": "Sprzedaż", "pracownicy": [{"imie": "Piotr", "wiek": 42, "staz": 10}, {"imie": "Ewa", "wiek": 25, "staz": 1}]}
+]
+# Chcemy stworzyć listę imion pracowników, pisanych WIELKIMI literami, ale tylko z działu IT, i tylko tych, którzy mają więcej niż 30 lat. Dodatkowo, jeśli ich staż w firmie wynosi więcej niż 3 lata, chcemy dokleić do ich imienia dopisek "(Senior)".
+wynik = [p["imie"].upper() + " (Senior)" if p["staz"] > 3 else p["imie"].upper() \
+         for d in firma if d["dzial"] == "IT" \
+         for p in d["pracownicy"] if p["wiek"] > 30]
+
+
+wynik = []
+
+for d in firma:
+    if d["dzial"] == "IT":
+        for p in d["pracownicy"]:
+            if p["wiek"] > 30:
+                
+                # Formatowanie imienia
+                imie_format = p["imie"].upper()
+                if p["staz"] > 3:
+                    imie_format += " (Senior)"
+                    
+                wynik.append(imie_format)
+print(wynik)

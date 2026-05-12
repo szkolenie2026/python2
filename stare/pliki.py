@@ -1,4 +1,4 @@
-file = open("d:\Documents\Szkolenia\Python\cwiczenia\plik.txt","rt")
+file = open("d:\Documents\Szkolenia\Python\cwiczenia\stare\plik.txt","rt",encoding="utf8")
 #print(file.read())
 
 ##zawartosc = file.read()
@@ -22,7 +22,7 @@ while wiersz:
 ##    print(line)
 
 ## [subcode]
-file = open("d:\Documents\Szkolenia\Python\cwiczenia\plik2.txt", "w")
+file = open("d:\Documents\Szkolenia\Python\cwiczenia\stare\plik2.txt", "w")
 file.write("Zosia ma kotka.")
 file.close()
  

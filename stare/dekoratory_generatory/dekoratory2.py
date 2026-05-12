@@ -1,5 +1,4 @@
 import time
-
 # 1. Definicja dekoratora
 def stoper(funkcja):
     def wrapper(*args, **kwargs):

@@ -1,53 +1,82 @@
 
+# #pętla od 0 do 4
+# for u in (0,1,2,3,4):
+#     print("Krok pętli=", u)
 
-for u in (1,2,3,4,5):
-    print("Krok pętli=", u)
+# #zapis równoważny od 0 do 4
+# for u in range(5):
+#     print("Krok pętli=" + str(u) )
 
-for u in range(5):
-    print("Iteracja=" + str(u))
-## [subcode]
+# #zapis równoważny od 0 do 4
+# for u in range(0,5):   #step = 1
+#     print("Krok pętli=" + str(u) )
 
-for u in range(1,5):
-    print("Iteracja=", u)
+# # Od 10 do 18 co dwa
+# for i in range(10, 20, 2):  
+#    print(f"Numer: {i}") 
+
+#iteracja po tekście
+# for litera in "Ala ma kota":  
+#     print(litera)
+
+# cars = ['audi','bmw','skoda','kia']
+
+# for car in cars:  #iteracja po liście
+#     print( "Pojazd: ", car )
 
 
-for u in range(1,5,2):
-    print("Iteracja=", u)
+# cars = ['audi','bmw','skoda','kia']
 
-for c in "Ala ma kota":
-    print("Znak = ", c)
-## [subcode]
+# ile = len(cars)
+# for car in range(ile):
+#     print("Pojazd nr = ", car, end=" ")
+#     print("to: ", cars[car])
+
+# cars = ['audi','bmw','skoda','kia']
+# ile = 0
+
+# for car in cars:  #iteracja po liście
+#     print("Pojazd nr = ", ile, end=' ')
+#     print("to: ", car)
+#     ile += 1
+
+# for car in cars:
+#     for c in ("biały","czarny","czerwony"):
+#         print("Pojazd: ",car, " w kolorze: ",c)
 
 
+# cars = ['audi','bmw','skoda','kia']
+
+# # start=1 sprawia, że liczenie zacznie się od 1, a nie od 0
+# for ile, car in enumerate(cars, start=0):
+#     print("Pojazd nr = ", ile, end=' ')
+#     print("to: ", car)
 
 cars = ['audi','bmw','skoda','kia']
-ile = len(cars)
-for car in range(ile):
-    print("Pojazd nr = ", car)
-    print("to: ", cars[car])
-
-
-
+colors = ("biały","czarny","czerwony")
 for car in cars:
-    for c in ("biały","czarny","czerwony"):
-        print("Pojazd: ",car, " w kolorze: ",c)
+    for color in colors:
+        print("Pojazd: ",car, " dostępny w kolorze: ",color)
 
-wynik = ""
-pierwszy=""
 
-for wiersz in range (0,11):
-    wynik =  ""
-    for kolumna in range(1,11):
-        if wiersz == 0:
-            pierwszy += "*" + str(kolumna) + "*"
-        else:
-            if kolumna == 1:
-                wynik += str(wiersz) + " *" + str(wiersz*kolumna) +"*"
-            else:
-                wynik += " *" + str(wiersz*kolumna) +"*"
 
-    if wiersz==0:
-        print(pierwszy)
-    else:
-        #print(wiersz * kolumna)
-        print(wynik)
+
+# wynik = ""
+# pierwszy=""
+
+# for wiersz in range (0,11):
+#     wynik =  ""
+#     for kolumna in range(1,11):
+#         if wiersz == 0:
+#             pierwszy += "*" + str(kolumna) + "*"
+#         else:
+#             if kolumna == 1:
+#                 wynik += str(wiersz) + " *" + str(wiersz*kolumna) +"*"
+#             else:
+#                 wynik += " *" + str(wiersz*kolumna) +"*"
+
+#     if wiersz==0:
+#         print(pierwszy)
+#     else:
+#         #print(wiersz * kolumna)
+#         print(wynik)
