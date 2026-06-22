@@ -14,3 +14,5 @@ def dopisz_dane_do_pliku(sciezka, tekst):
     plik.write("\n")
     plik.write(tekst)
     plik.close()
+from pathlib import Path
+

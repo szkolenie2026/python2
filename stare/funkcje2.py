@@ -1,5 +1,11 @@
 import funkcje_zewnętrzne as ff
 
+import narzędzia
+# Używamy funkcji z modułu narzędzia
+tekst = narzedzia.powitanie("Marek")
+podatek = narzedzia.oblicz_podatek(1000)
+print(tekst)      # Wynik: Witaj Marek! Miłego programowania.
+print(podatek)    # Wynik: 230.0
 
 
 

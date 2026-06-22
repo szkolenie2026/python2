@@ -52,13 +52,38 @@
 #     print("Pojazd nr = ", ile, end=' ')
 #     print("to: ", car)
 
-cars = ['audi','bmw','skoda','kia']
-colors = ("biały","czarny","czerwony")
-for car in cars:
-    for color in colors:
-        print("Pojazd: ",car, " dostępny w kolorze: ",color)
+# cars = ['audi','bmw','skoda','kia']
+# colors = ("biały","czarny","czerwony")
+# for car in cars:
+#     for color in colors:
+#         print("Pojazd: ",car, " dostępny w kolorze: ",color)
 
+# garaz = {
+#     "Toyota": "Corolla",
+#     "Mazda": "CX-5",
+#     "BMW": "M3",
+#     "Tesla": "Model S"
+# }
+# print("--- MOJA KOLEKCJA ---")
+# for marka, model in garaz.items():
+#     print(f"Marka: {marka} | Model: {model}")
+# print("\n--- POSIADANE MARKI ---")
+# for marka in garaz.keys():
+#     print(f"Mam w garażu samochód marki: {marka}")
+for marka in garaz.values():
+    print(f"Mam w garażu pojazd: {marka}")
 
+auta_szczegoly = {
+    "WA12345": {"marka": "Toyota", "rok": 2020, "przebieg": 50000},
+    "KR67890": {"marka": "BMW", "rok": 2018, "przebieg": 120000}
+}
+for rejestracja, dane in auta_szczegoly.items():
+    print(f"Auto o numerze {rejestracja}:")
+    # Odwołujemy się do wewnętrznego słownika 'dane'
+    marka    = dane["marka"]
+    rok      = dane["rok"]
+    przebieg = dane["przebieg"]
+    print(f"  -> {marka} z roku {rok} ma przebieg: {przebieg}")
 
 
 # wynik = ""
